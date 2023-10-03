@@ -64,7 +64,7 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
-func HealthzHandler(w http.ResponseWriter, r *http.Request) {
+func handlehealthz(w http.ResponseWriter, r *http.Request) {
 	healthcheck.HealthzHandler(w, r, db)
 }
 
